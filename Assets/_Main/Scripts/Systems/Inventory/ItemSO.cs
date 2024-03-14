@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections;
 using UnityEngine;
+using System;
 
 namespace Inventory
 {
@@ -10,6 +8,7 @@ namespace Inventory
         [SerializeField] private string _id;
         [SerializeField] private Sprite _image;
         [SerializeField] private string _description;
+        [SerializeField] private int _stack;
 
         public string Id { get { return _id; } protected set { _id = value; } }
         public Sprite Image => _image;
@@ -18,10 +17,10 @@ namespace Inventory
             get { return _description; }
             protected set { _description = value; }
         }
-
-        private void OnEnable()
+        public int Stack
         {
-            _id = Random.Range(0, 1000).ToString("0000");
+            get { return _stack; }
+            protected set { _stack = value; }
         }
 
         public abstract void Use();
