@@ -1,4 +1,4 @@
-namespace Simple.DesignPattern
+namespace Simple.DesignPattern.State
 {
     public class StateController
     {
