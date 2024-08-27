@@ -8,8 +8,6 @@ public static class EventManager
     /// <summary>
     /// example: Delegate del = new Action<int, float, bool>(MyFunc);
     /// </summary>
-    /// <param name="eventName">assdasd</param>
-    /// <param name="listener"></param>
     public static void StartListening(string eventName, Delegate listener)
     {
         if (_eventDictionary.TryGetValue(eventName, out Delegate thisEvent))
