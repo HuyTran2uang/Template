@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner<T> : MonoBehaviourSingleton<Spawner<T>> where T : MonoBehaviour
+public class Spawner<T> : Singleton<Spawner<T>> where T : MonoBehaviour
 {
     [SerializeField] protected T _prefab;
     [SerializeField] protected Transform _container;
